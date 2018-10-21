@@ -11,6 +11,7 @@ buildscript {
 }
 
 apply plugin: 'java'
+apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
@@ -20,6 +21,7 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 configurations.compile {
@@ -36,8 +38,11 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-mail')
     compile('com.lmax:disruptor:3.4.0')
     compile("org.springframework.boot:spring-boot-devtools")
+    implementation("com.nghia.tut.utils:nghia-libraries:1.0") {
+        exclude module: 'spring-boot-starter-amqp'
+        exclude module: 'spring-boot-starter-tomcat'
+        exclude module: 'spring-boot-starter-data-mongodb'
+    }
 
-
-//    compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
