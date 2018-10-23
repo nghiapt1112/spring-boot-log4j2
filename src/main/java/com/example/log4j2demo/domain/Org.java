@@ -16,7 +16,7 @@ public class Org {
     private final Logger LOGGER = LoggerFactory.getLogger(getClass());
 
     private String id;
-    private List<String> parentIds;
+    private LinkedList<String> parentIds;
     private LinkedList<Org> children = new LinkedList<>();
 
     public Org buildTree(List<Org> orgs) {
@@ -84,7 +84,7 @@ public class Org {
 
     private boolean isChildOf(Org superNode) {
         return (this.parentIds.size() - superNode.parentIds.size() == 1)
-                && (this.parentIds.get(this.parentIds.size() - 1).equals(superNode.id));
+                && (this.parentIds.getLast().equals(superNode.id));
     }
 
     public Org getRoot(List<Org> elements) {
@@ -113,6 +113,6 @@ public class Org {
         if (CollectionUtils.isEmpty(this.children)) {
             this.children = new LinkedList<>();
         }
-        this.children.add(org);
+        this.children.addLast(org);
     }
 }
