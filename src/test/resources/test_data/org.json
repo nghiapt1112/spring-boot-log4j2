@@ -1,0 +1,50 @@
+[
+  {
+    "id": "A",
+    "parentIds": []
+  },
+  {
+    "id": "A1",
+    "parentIds": ["A"]
+  },
+  {
+    "id": "A2",
+    "parentIds": ["A"]
+  },
+  {
+    "id": "A3",
+    "parentIds": ["A"]
+  },
+  {
+    "id": "A1.1",
+    "parentIds": ["A","A1"]
+  },
+  {
+    "id": "A1.2",
+    "parentIds": ["A","A1"]
+  },
+  {
+    "id": "A1.3",
+    "parentIds": ["A","A1"]
+  },
+  {
+    "id": "A1.4",
+    "parentIds": ["A","A1"]
+  },
+  {
+    "id": "A1.1.1",
+    "parentIds": ["A","A1","A1.1"]
+  },
+  {
+    "id": "A1.1.2",
+    "parentIds": ["A","A1","A1.1"]
+  },
+  {
+    "id": "A1.1.3",
+    "parentIds": ["A","A1","A1.1"]
+  },
+  {
+    "id": "A1.1.2",
+    "parentIds": ["A","A1","A1.1"]
+  }
+]

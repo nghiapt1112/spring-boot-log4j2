@@ -1,17 +1,37 @@
 package com.example.log4j2demo;
 
+import com.example.log4j2demo.domain.Org;
+import com.nghia.libraries.commons.mss.utils.JsonUtils;
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.io.*;
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 @RunWith(SpringRunner.class)
-@SpringBootTest
 public class Log4j2DemoApplicationTests {
 
-	@Test
-	public void contextLoads() {
+    @Test
+    public void org() throws IOException {
+        InputStream is = new ClassPathResource("/test_data/org.json").getInputStream();
+        String fileContent = IOUtils.toString(is, Charset.defaultCharset());
+        ArrayList<Org> orgs = JsonUtils.toCollection(fileContent, ArrayList.class, Org.class);
 
-	}
+        System.out.println("DONE");
+
+
+        Org build = new Org();
+        Org tree = build.buildTree(orgs);
+
+        System.out.println(JsonUtils.toJson(tree));
+    }
 
 }
