@@ -3,12 +3,13 @@ package com.example.log4j2demo.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.collections4.MultiValuedMap;
+import org.apache.commons.collections4.multimap.ArrayListValuedHashMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Org {
@@ -18,6 +19,14 @@ public class Org {
     private String id;
     private LinkedList<String> parentIds;
     private LinkedList<Org> children = new LinkedList<>();
+
+    public LinkedList<String> getParentIds() {
+        return parentIds;
+    }
+
+    public String getParentIdsAsString() {
+        return this.parentIds.stream().collect(Collectors.joining(","));
+    }
 
     public Org buildTree(List<Org> orgs) {
         List<Org> sortedOrgList = this.sortByLevel(orgs);
@@ -95,15 +104,15 @@ public class Org {
 
     //TODO: Sorting by increase of parentIds.
     private List<Org> sortByLevel(List<Org> liOrg) {
-        liOrg.sort((e1, e2) -> compareByLevel(e1, e2));
+        liOrg.sort((e1, e2) -> compareByLevel(e1.parentIds, e2.parentIds));
         return liOrg;
     }
 
-    private int compareByLevel(Org e1, Org e2) {
-        if (e1.parentIds.size() > e2.parentIds.size()) {
+    private int compareByLevel(LinkedList<String> e1, LinkedList<String> e2) {
+        if (e1.size() > e2.size()) {
             return 1;
         }
-        if (e1.parentIds.size() < e2.parentIds.size()) {
+        if (e1.size() < e2.size()) {
             return -1;
         }
         return 0;
@@ -114,5 +123,49 @@ public class Org {
             this.children = new LinkedList<>();
         }
         this.children.addLast(org);
+    }
+
+
+    private Map<LinkedList<String>, List<Org>> groupByLevel(ArrayList<Org> orgs) {
+//        Map<LinkedList<String>, List<Org>> groupByLevel = orgs.stream().collect(Collectors.groupingBy(el -> el.parentIds));
+        SortedMap<LinkedList<String>, List<Org>> groupByLevel = new TreeMap<>();
+        Org root = null;
+        for (Org el : orgs) {
+            if (CollectionUtils.isEmpty(el.parentIds)) {
+                root = el;
+                continue;
+            }
+            LinkedList<String> K = el.getParentIds();
+            List<Org> V = groupByLevel.get(K);
+
+            if (Objects.isNull(V)) {
+                V = new ArrayList<>();
+            }
+            // TODO: can order here to ordered input, ex order children in same level. Which one is brother.
+            V.add(el);
+            groupByLevel.put(K, V);
+        }
+
+        List<LinkedList<String>> sortedKeys = groupByLevel.keySet()
+                .stream()
+                .sorted((e1, e2) -> compareByLevel(e1, e2))
+                .collect(Collectors.toList());
+
+
+
+        for (int i = 2; i < sortedKeys.size(); i++) {
+
+        }
+        orgs.clear();
+        return groupByLevel;
+    }
+
+    private void buildTreeByMap(Map<LinkedList<String>, List<Org>> multiOrgByLevel) {
+//        multiOrgByLevel.entrySet().stream().sorted((e1, e2) -> compareByLevel(e1,e2))
+
+
+        for (Map.Entry entry : multiOrgByLevel.entrySet()) {
+
+        }
     }
 }
