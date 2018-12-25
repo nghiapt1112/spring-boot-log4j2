@@ -1,8 +1,8 @@
 package com.example.log4j2demo;
 
-import com.example.log4j2demo.domain.Org;
-import com.example.log4j2demo.domain.OrgForBuild;
-import com.example.log4j2demo.domain.OrgMapBuild;
+import com.example.log4j2demo.tree.Org;
+import com.example.log4j2demo.tree.OrgForBuild;
+import com.example.log4j2demo.tree.OrgMapBuild;
 import com.nghia.libraries.commons.mss.utils.JsonUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.time.StopWatch;

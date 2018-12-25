@@ -1,4 +1,4 @@
-package com.example.log4j2demo.domain;
+package com.example.log4j2demo.tree;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import org.apache.commons.collections4.CollectionUtils;

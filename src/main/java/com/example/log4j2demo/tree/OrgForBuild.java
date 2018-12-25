@@ -1,4 +1,4 @@
-package com.example.log4j2demo.domain;
+package com.example.log4j2demo.tree;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.slf4j.Logger;
