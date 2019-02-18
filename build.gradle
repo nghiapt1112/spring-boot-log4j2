@@ -10,6 +10,10 @@ buildscript {
     }
 }
 
+plugins {
+    id 'net.ltgt.apt' version '0.10'
+}
+
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
@@ -32,6 +36,9 @@ configurations.compile {
 
 
 dependencies {
+    //Lombok
+    implementation('org.projectlombok:lombok:1.18.4')
+    apt('org.projectlombok:lombok:1.18.4')
     implementation('org.springframework.boot:spring-boot-starter-web')
 
     implementation('org.springframework.boot:spring-boot-starter-log4j2')

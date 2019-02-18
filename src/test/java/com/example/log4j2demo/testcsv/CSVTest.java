@@ -12,8 +12,8 @@ public class CSVTest {
 
     @Test
     public void readCSV() {
-        CSVReader csvReader = CSVReader.getInstance();
-        List<UserCSV> lines = csvReader.readFile(DIR_PATH + "csv_data/user.csv", UserCSV.class);
+        CSVReader csvReader = CSVReader.getInstance().withTyped(UserCSV.class);
+        List<UserCSV> lines = csvReader.readFile(DIR_PATH + "csv_data/user.csv");
         System.out.println(lines);
     }
 
