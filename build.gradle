@@ -4,6 +4,14 @@ buildscript {
     }
     repositories {
         mavenCentral()
+        maven {
+            url "https://www.oracle.com/content/secure/maven/content"
+            name "maven.oracle.com"
+            credentials {
+                username 'tuannghia'
+                password 'your password'
+            }
+        }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -39,7 +47,9 @@ dependencies {
     //Lombok
     implementation('org.projectlombok:lombok:1.18.4')
     apt('org.projectlombok:lombok:1.18.4')
+    implementation files('./ojdbc7.jar')
     implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
 
     implementation('org.springframework.boot:spring-boot-starter-log4j2')
     implementation('org.springframework.boot:spring-boot-starter-mail')

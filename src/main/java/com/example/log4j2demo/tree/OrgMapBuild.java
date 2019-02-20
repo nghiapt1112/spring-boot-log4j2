@@ -25,6 +25,7 @@ public class OrgMapBuild {
 
             if (Objects.isNull(V)) {
                 V = new ArrayList<>();
+
             }
             // TODO: can order here to ordered input, ex order children in same level. Which one is brother.
             V.add(el);

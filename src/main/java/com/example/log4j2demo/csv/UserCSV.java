@@ -6,7 +6,7 @@ import lombok.Data;
 
 import java.util.Date;
 
-//@Data
+@Data
 public class UserCSV {
     @CSVField
     private Integer id;
@@ -17,7 +17,6 @@ public class UserCSV {
     @CSVField
     private String email;
 
-    @CSVField
     @DateTime
     private Date birth;
 

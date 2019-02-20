@@ -50,8 +50,7 @@ public class OrgForBuild {
         }
         int lastIndex = 0;
         for (int i = index; i < sortedOrgList.size(); i++) {
-
-            // Tr][fng hop ma truyen vao 0 thi tru di no cung = 1
+            // Truong hop ma truyen vao 0 thi tru di no cung = 1
             Org e = sortedOrgList.get(i);
             if (Objects.isNull(e)) {
                 LOGGER.warn("\n===============Current object is null, please check data.===============");
