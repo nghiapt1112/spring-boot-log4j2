@@ -1,0 +1,188 @@
+2019-02-26 10:53:40.839  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Starting Log4j2DemoApplication on vostro with PID 24794 (/mnt/ng-data/PROJECT/NGHIA/PET/spring-boot-log4j2/p_log4j/build/classes/java/main started by nghiapt in /mnt/ng-data/PROJECT/NGHIA/PET/spring-boot-log4j2/p_log4j)
+2019-02-26 10:53:40.842 DEBUG vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2019-02-26 10:53:40.842  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : No active profile set, falling back to default profiles: default
+2019-02-26 10:53:40.978  INFO vostro --- [  restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4699b6d0: startup date [Tue Feb 26 10:53:40 ICT 2019]; root of context hierarchy
+2019-02-26 10:53:41.853  INFO vostro --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2019-02-26 10:53:41.869  INFO vostro --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-26 10:53:41.876  INFO vostro --- [  restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-02-26 10:53:41.877  INFO vostro --- [  restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-02-26 10:53:41.883  INFO vostro --- [ost-startStop-1] o.a.c.c.AprLifecycleListener             : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-02-26 10:53:41.931  INFO vostro --- [ost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-02-26 10:53:41.931  INFO vostro --- [ost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 955 ms
+2019-02-26 10:53:41.965  INFO vostro --- [ost-startStop-1] o.s.b.w.s.ServletRegistrationBean        : Servlet dispatcherServlet mapped to [/]
+2019-02-26 10:53:41.968  INFO vostro --- [ost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-26 10:53:41.968  INFO vostro --- [ost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-26 10:53:41.968  INFO vostro --- [ost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-26 10:53:41.968  INFO vostro --- [ost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-26 10:53:42.049  INFO vostro --- [  restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-26 10:53:42.261  INFO vostro --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4699b6d0: startup date [Tue Feb 26 10:53:40 ICT 2019]; root of context hierarchy
+2019-02-26 10:53:42.307  INFO vostro --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-26 10:53:42.308  INFO vostro --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-26 10:53:42.323  INFO vostro --- [  restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-26 10:53:42.323  INFO vostro --- [  restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-26 10:53:42.426  INFO vostro --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-02-26 10:53:42.445  INFO vostro --- [  restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-02-26 10:53:42.459  INFO vostro --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2019-02-26 10:53:42.462  INFO vostro --- [  restartedMain] o.a.t.u.n.NioSelectorPool                : Using a shared selector for servlet write/read
+2019-02-26 10:53:42.490  INFO vostro --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2019-02-26 10:53:42.493  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Started Log4j2DemoApplication in 1.855 seconds (JVM running for 2.406)
+2019-02-26 10:53:42.494 DEBUG vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Debugging log
+2019-02-26 10:53:42.494  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Info log
+2019-02-26 10:53:42.494  WARN vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Hey, This is a warning!
+2019-02-26 10:53:42.494 ERROR vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Oops! We have an Error. OK
+2019-02-26 10:53:42.494 FATAL vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Damn! Fatal error. Please fix me.
+2019-02-26 10:53:44.844  INFO vostro --- [       Thread-9] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4699b6d0: startup date [Tue Feb 26 10:53:40 ICT 2019]; root of context hierarchy
+2019-02-26 10:53:44.847  INFO vostro --- [       Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-02-26 10:53:55.669  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Starting Log4j2DemoApplication on vostro with PID 24916 (/mnt/ng-data/PROJECT/NGHIA/PET/spring-boot-log4j2/p_log4j/build/classes/java/main started by nghiapt in /mnt/ng-data/PROJECT/NGHIA/PET/spring-boot-log4j2/p_log4j)
+2019-02-26 10:53:55.674 DEBUG vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2019-02-26 10:53:55.675  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : No active profile set, falling back to default profiles: default
+2019-02-26 10:53:55.730  INFO vostro --- [  restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@709428c4: startup date [Tue Feb 26 10:53:55 ICT 2019]; root of context hierarchy
+2019-02-26 10:53:56.749  INFO vostro --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2019-02-26 10:53:56.767  INFO vostro --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-26 10:53:56.774  INFO vostro --- [  restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-02-26 10:53:56.774  INFO vostro --- [  restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-02-26 10:53:56.781  INFO vostro --- [ost-startStop-1] o.a.c.c.AprLifecycleListener             : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-02-26 10:53:56.831  INFO vostro --- [ost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-02-26 10:53:56.831  INFO vostro --- [ost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1104 ms
+2019-02-26 10:53:56.877  INFO vostro --- [ost-startStop-1] o.s.b.w.s.ServletRegistrationBean        : Servlet dispatcherServlet mapped to [/]
+2019-02-26 10:53:56.879  INFO vostro --- [ost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-26 10:53:56.879  INFO vostro --- [ost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-26 10:53:56.879  INFO vostro --- [ost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-26 10:53:56.880  INFO vostro --- [ost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-26 10:53:57.010  INFO vostro --- [  restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-26 10:53:57.235  INFO vostro --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@709428c4: startup date [Tue Feb 26 10:53:55 ICT 2019]; root of context hierarchy
+2019-02-26 10:53:57.291  INFO vostro --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-26 10:53:57.292  INFO vostro --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-26 10:53:57.313  INFO vostro --- [  restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-26 10:53:57.313  INFO vostro --- [  restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-26 10:53:57.451  INFO vostro --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-02-26 10:53:57.471  INFO vostro --- [  restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-02-26 10:53:57.481  INFO vostro --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2019-02-26 10:53:57.484  INFO vostro --- [  restartedMain] o.a.t.u.n.NioSelectorPool                : Using a shared selector for servlet write/read
+2019-02-26 10:53:57.502  INFO vostro --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2019-02-26 10:53:57.504  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Started Log4j2DemoApplication in 2.042 seconds (JVM running for 2.603)
+2019-02-26 10:53:57.505 DEBUG vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Debugging log
+2019-02-26 10:53:57.505  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Info log
+2019-02-26 10:53:57.505  WARN vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Hey, This is a warning!
+2019-02-26 10:53:57.505 ERROR vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Oops! We have an Error. OK
+2019-02-26 10:53:57.505 FATAL vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Damn! Fatal error. Please fix me.
+2019-02-26 10:54:10.317  INFO vostro --- [       Thread-9] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@709428c4: startup date [Tue Feb 26 10:53:55 ICT 2019]; root of context hierarchy
+2019-02-26 10:54:10.320  INFO vostro --- [       Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-02-26 10:54:27.144  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Starting Log4j2DemoApplication on vostro with PID 25132 (/mnt/ng-data/PROJECT/NGHIA/PET/spring-boot-log4j2/p_log4j/build/classes/java/main started by nghiapt in /mnt/ng-data/PROJECT/NGHIA/PET/spring-boot-log4j2/p_log4j)
+2019-02-26 10:54:27.147 DEBUG vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2019-02-26 10:54:27.148  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : No active profile set, falling back to default profiles: default
+2019-02-26 10:54:27.201  INFO vostro --- [  restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@f5bce98: startup date [Tue Feb 26 10:54:27 ICT 2019]; root of context hierarchy
+2019-02-26 10:54:28.312  INFO vostro --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2019-02-26 10:54:28.342  INFO vostro --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-26 10:54:28.355  INFO vostro --- [  restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-02-26 10:54:28.356  INFO vostro --- [  restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-02-26 10:54:28.370  INFO vostro --- [ost-startStop-1] o.a.c.c.AprLifecycleListener             : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-02-26 10:54:28.442  INFO vostro --- [ost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-02-26 10:54:28.445  INFO vostro --- [ost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1246 ms
+2019-02-26 10:54:28.526  INFO vostro --- [ost-startStop-1] o.s.b.w.s.ServletRegistrationBean        : Servlet dispatcherServlet mapped to [/]
+2019-02-26 10:54:28.530  INFO vostro --- [ost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-26 10:54:28.531  INFO vostro --- [ost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-26 10:54:28.531  INFO vostro --- [ost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-26 10:54:28.532  INFO vostro --- [ost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-26 10:54:28.622  INFO vostro --- [  restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-26 10:54:28.841  INFO vostro --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@f5bce98: startup date [Tue Feb 26 10:54:27 ICT 2019]; root of context hierarchy
+2019-02-26 10:54:28.894  INFO vostro --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-26 10:54:28.895  INFO vostro --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-26 10:54:28.910  INFO vostro --- [  restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-26 10:54:28.910  INFO vostro --- [  restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-26 10:54:29.023  INFO vostro --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-02-26 10:54:29.051  INFO vostro --- [  restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-02-26 10:54:29.060  INFO vostro --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2019-02-26 10:54:29.063  INFO vostro --- [  restartedMain] o.a.t.u.n.NioSelectorPool                : Using a shared selector for servlet write/read
+2019-02-26 10:54:29.099  INFO vostro --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2019-02-26 10:54:29.102  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Started Log4j2DemoApplication in 2.164 seconds (JVM running for 2.704)
+2019-02-26 10:54:29.103 DEBUG vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Debugging log
+2019-02-26 10:54:29.103  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Info log
+2019-02-26 10:54:29.103  WARN vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Hey, This is a warning!
+2019-02-26 10:54:29.103 ERROR vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Oops! We have an Error. OK
+2019-02-26 10:54:29.103 FATAL vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Damn! Fatal error. Please fix me.
+2019-02-26 10:54:43.256  INFO vostro --- [       Thread-9] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@f5bce98: startup date [Tue Feb 26 10:54:27 ICT 2019]; root of context hierarchy
+2019-02-26 10:54:43.258  INFO vostro --- [       Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-02-26 10:55:07.792  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Starting Log4j2DemoApplication on vostro with PID 25508 (/mnt/ng-data/PROJECT/NGHIA/PET/spring-boot-log4j2/p_log4j/build/classes/java/main started by nghiapt in /mnt/ng-data/PROJECT/NGHIA/PET/spring-boot-log4j2/p_log4j)
+2019-02-26 10:55:07.795 DEBUG vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2019-02-26 10:55:07.796  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : No active profile set, falling back to default profiles: default
+2019-02-26 10:55:07.845  INFO vostro --- [  restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6968d631: startup date [Tue Feb 26 10:55:07 ICT 2019]; root of context hierarchy
+2019-02-26 10:55:08.824  INFO vostro --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2019-02-26 10:55:08.842  INFO vostro --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-26 10:55:08.850  INFO vostro --- [  restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-02-26 10:55:08.850  INFO vostro --- [  restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-02-26 10:55:08.858  INFO vostro --- [ost-startStop-1] o.a.c.c.AprLifecycleListener             : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-02-26 10:55:08.909  INFO vostro --- [ost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-02-26 10:55:08.909  INFO vostro --- [ost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1066 ms
+2019-02-26 10:55:08.947  INFO vostro --- [ost-startStop-1] o.s.b.w.s.ServletRegistrationBean        : Servlet dispatcherServlet mapped to [/]
+2019-02-26 10:55:08.949  INFO vostro --- [ost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-26 10:55:08.950  INFO vostro --- [ost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-26 10:55:08.950  INFO vostro --- [ost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-26 10:55:08.950  INFO vostro --- [ost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-26 10:55:09.039  INFO vostro --- [  restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-26 10:55:09.166  INFO vostro --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6968d631: startup date [Tue Feb 26 10:55:07 ICT 2019]; root of context hierarchy
+2019-02-26 10:55:09.321  INFO vostro --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-26 10:55:09.322  INFO vostro --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-26 10:55:09.337  INFO vostro --- [  restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-26 10:55:09.337  INFO vostro --- [  restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-26 10:55:09.442  INFO vostro --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-02-26 10:55:09.462  INFO vostro --- [  restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-02-26 10:55:09.472  INFO vostro --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2019-02-26 10:55:09.475  INFO vostro --- [  restartedMain] o.a.t.u.n.NioSelectorPool                : Using a shared selector for servlet write/read
+2019-02-26 10:55:09.507  INFO vostro --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2019-02-26 10:55:09.510  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Started Log4j2DemoApplication in 1.915 seconds (JVM running for 2.453)
+2019-02-26 10:55:09.511 DEBUG vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Debugging log
+2019-02-26 10:55:09.511  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Info log
+2019-02-26 10:55:09.511  WARN vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Hey, This is a warning!
+2019-02-26 10:55:09.511 ERROR vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Oops! We have an Error. OK
+2019-02-26 10:55:09.511 FATAL vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Damn! Fatal error. Please fix me.
+2019-02-26 10:56:06.579  INFO vostro --- [       Thread-9] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6968d631: startup date [Tue Feb 26 10:55:07 ICT 2019]; root of context hierarchy
+2019-02-26 10:56:06.581  INFO vostro --- [       Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-02-26 10:56:15.942  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Starting Log4j2DemoApplication on vostro with PID 25828 (/mnt/ng-data/PROJECT/NGHIA/PET/spring-boot-log4j2/p_log4j/build/classes/java/main started by nghiapt in /mnt/ng-data/PROJECT/NGHIA/PET/spring-boot-log4j2/p_log4j)
+2019-02-26 10:56:15.946 DEBUG vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2019-02-26 10:56:15.947  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : No active profile set, falling back to default profiles: default
+2019-02-26 10:56:16.011  INFO vostro --- [  restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@742238b5: startup date [Tue Feb 26 10:56:16 ICT 2019]; root of context hierarchy
+2019-02-26 10:56:16.925  INFO vostro --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2019-02-26 10:56:16.944  INFO vostro --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-26 10:56:16.951  INFO vostro --- [  restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-02-26 10:56:16.952  INFO vostro --- [  restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-02-26 10:56:16.959  INFO vostro --- [ost-startStop-1] o.a.c.c.AprLifecycleListener             : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-02-26 10:56:17.010  INFO vostro --- [ost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-02-26 10:56:17.011  INFO vostro --- [ost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1002 ms
+2019-02-26 10:56:17.047  INFO vostro --- [ost-startStop-1] o.s.b.w.s.ServletRegistrationBean        : Servlet dispatcherServlet mapped to [/]
+2019-02-26 10:56:17.050  INFO vostro --- [ost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-26 10:56:17.050  INFO vostro --- [ost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-26 10:56:17.051  INFO vostro --- [ost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-26 10:56:17.051  INFO vostro --- [ost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-26 10:56:17.132  INFO vostro --- [  restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-26 10:56:17.252  INFO vostro --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@742238b5: startup date [Tue Feb 26 10:56:16 ICT 2019]; root of context hierarchy
+2019-02-26 10:56:17.414  INFO vostro --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-26 10:56:17.415  INFO vostro --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-26 10:56:17.432  INFO vostro --- [  restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-26 10:56:17.432  INFO vostro --- [  restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-26 10:56:17.539  INFO vostro --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-02-26 10:56:17.558  INFO vostro --- [  restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-02-26 10:56:17.568  INFO vostro --- [  restartedMain] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2019-02-26 10:56:17.571  INFO vostro --- [  restartedMain] o.a.t.u.n.NioSelectorPool                : Using a shared selector for servlet write/read
+2019-02-26 10:56:17.608  INFO vostro --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2019-02-26 10:56:17.610  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Started Log4j2DemoApplication in 1.878 seconds (JVM running for 2.385)
+2019-02-26 10:56:17.613 DEBUG vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Debugging log
+2019-02-26 10:56:17.613  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Info log
+2019-02-26 10:56:17.613  WARN vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Hey, This is a warning!
+2019-02-26 10:56:17.613 ERROR vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Oops! We have an Error. OK
+2019-02-26 10:56:17.613 FATAL vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Damn! Fatal error. Please fix me.
+2019-02-26 10:56:18.759  INFO vostro --- [       Thread-9] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@742238b5: startup date [Tue Feb 26 10:56:16 ICT 2019]; root of context hierarchy
+2019-02-26 10:56:18.761  INFO vostro --- [       Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-02-26 10:57:28.125  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Starting Log4j2DemoApplication on vostro with PID 26171 (/mnt/ng-data/PROJECT/NGHIA/PET/spring-boot-log4j2/p_log4j/build/classes/java/main started by nghiapt in /mnt/ng-data/PROJECT/NGHIA/PET/spring-boot-log4j2/p_log4j)
+2019-02-26 10:57:28.127 DEBUG vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2019-02-26 10:57:28.127  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : No active profile set, falling back to default profiles: default
+2019-02-26 10:57:28.159  INFO vostro --- [  restartedMain] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@24c4e2be: startup date [Tue Feb 26 10:57:28 ICT 2019]; root of context hierarchy
+2019-02-26 10:57:28.666  INFO vostro --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-02-26 10:57:28.684  INFO vostro --- [  restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-02-26 10:57:28.694  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Started Log4j2DemoApplication in 0.77 seconds (JVM running for 1.278)
+2019-02-26 10:57:28.695 DEBUG vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Debugging log
+2019-02-26 10:57:28.695  INFO vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Info log
+2019-02-26 10:57:28.695  WARN vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Hey, This is a warning!
+2019-02-26 10:57:28.695 ERROR vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Oops! We have an Error. OK
+2019-02-26 10:57:28.695 FATAL vostro --- [  restartedMain] c.e.t.Log4j2DemoApplication              : Damn! Fatal error. Please fix me.
+2019-02-26 10:57:28.703  INFO vostro --- [       Thread-8] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@24c4e2be: startup date [Tue Feb 26 10:57:28 ICT 2019]; root of context hierarchy
