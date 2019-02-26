@@ -11,7 +11,8 @@ import java.util.Iterator;
 public class UserArgResolver implements HandlerMethodArgumentResolver {
     @Override
     public boolean supportsParameter(MethodParameter parameter) {
-        return UserPrincipal.class.isAssignableFrom(parameter.getParameterType());
+        return UserPrincipal.class.isAssignableFrom(parameter.getParameterType())
+                || NonAccountPrincipal.class.isAssignableFrom(parameter.getParameterType());
     }
 
     @Override
