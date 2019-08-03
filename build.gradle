@@ -51,8 +51,8 @@ subprojects {
 
 dependencies {
 //  Lombok
-    compileOnly 'org.projectlombok:lombok:1.18.6'
-    annotationProcessor 'org.projectlombok:lombok:1.18.6'
+//    compileOnly 'org.projectlombok:lombok:1.18.6'
+//    annotationProcessor 'org.projectlombok:lombok:1.18.6'
 
     implementation('org.springframework.boot:spring-boot-starter-web')
 //  Commons utils
