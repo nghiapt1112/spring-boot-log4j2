@@ -1,6 +1,29 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.4.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+
 dependencies {
     //  web
+    implementation('org.springframework.boot:spring-boot-starter-web')
+//  Commons utils
+    implementation('org.apache.commons:commons-lang3:3.8.1')
+    implementation("org.apache.commons:commons-collections4:4.1")
+    implementation("commons-io:commons-io:2.6")
+
+    implementation("org.springframework.boot:spring-boot-devtools")
+    testCompile('org.springframework.boot:spring-boot-starter-test')
     implementation files('./ojdbc7.jar')
     implementation project(':p_log4j')
     implementation('org.springframework.boot:spring-boot-starter-data-jpa')
 }
+
+
