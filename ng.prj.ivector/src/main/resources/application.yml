@@ -1,5 +1,8 @@
 server:
   port: 8081
+  compression:
+    enabled: true
+
 spring:
   output:
     ansi:
@@ -18,3 +21,8 @@ spring:
       host: localhost
       port: 37017
       database: ivector-dev
+
+app:
+  jwtExpirationInMs: 604800000
+  jwtSecret: JWTSuperSecretKey
+
