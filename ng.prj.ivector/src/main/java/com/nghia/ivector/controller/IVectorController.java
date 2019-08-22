@@ -1,6 +1,7 @@
 package com.nghia.ivector.controller;
 
 import com.nghia.ivector.domain.Movie;
+import com.nghia.ivector.domain.chart.CanvasjsChartData;
 import com.nghia.ivector.domain.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -26,7 +27,8 @@ public class IVectorController {
     }
 
     @GetMapping("/left")
-    public String left() {
+    public String left(Model model) {
+        model.addAttribute("dataPointsList", CanvasjsChartData.getCanvasjsDataList());
         return "left";
     }
 

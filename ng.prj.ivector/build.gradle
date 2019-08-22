@@ -41,3 +41,12 @@ dependencies {
     testImplementation 'io.projectreactor:reactor-test'
     testImplementation 'org.springframework.security:spring-security-test'
 }
+
+bootRun {
+    systemProperties = System.properties
+    jvmArgs = [
+            "-Dspring.output.ansi.enabled=ALWAYS",
+            "-Xdebug",
+            "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5015"
+    ]
+}

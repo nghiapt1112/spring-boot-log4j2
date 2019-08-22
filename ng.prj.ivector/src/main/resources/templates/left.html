@@ -30,6 +30,41 @@
             <h2>Pro Sidebar</h2>
             <hr>
             <div class="row">
+                <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+
+                <script type="text/javascript" th:inline="javascript">
+                    window.onload = function() {
+
+                        var chart = new CanvasJS.Chart("chartContainer", {
+                            theme: "light2", //"light1", "dark1", "dark2"
+                            animationEnabled: true,
+                            title: {
+                                text: "Iron Ore Production in India"
+                            },
+                            axisX: {
+                                valueFormatString: "YYYY"
+                            },
+                            axisY: {
+                                title: "Production (in million tonnes)",
+                                includeZero: false,
+                                maximum: 250
+                            },
+                            data: [{
+                                type: "column",
+                                xValueType: "dateTime",
+                                xValueFormatString: "YYYY",
+                                yValueFormatString: "#,##0mn tonnes",
+                                // dataPoints: dps[0]
+                                dataPoints:  /*[[ ${dataPointsList} ]]*/
+                            }]
+                        });
+
+                        chart.render();
+
+                    }
+                </script>
+            </div>
+            <div class="row">
                 <div class="form-group col-md-12">
                     <p>This is a responsive sidebar template with dropdown menu based on bootstrap 4 framework.</p>
                     <p> You can find the complete code on <a href="https://github.com/azouaoui-med/pro-sidebar-template" target="_blank">
@@ -91,9 +126,7 @@
                         <th scope="row">1</th>
                         <td>Kate</td>
                         <td>Moss</td>
-                        <td><img class="img-responsive img-rounded"
-                                 src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
-                                 alt="User picture"></td>
+                        <td> nams </td>
                         <td>New York City / Warsaw / Lodz / Amsterdam / London / Chicago</td>
                         <td>Web Designer /UX designer / Ul designer / JavaScript Developer</td>
                         <td>23</td>
@@ -186,6 +219,7 @@
 </div>
 <!-- page-wrapper -->
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
 </html>
