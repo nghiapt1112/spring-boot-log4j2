@@ -26,7 +26,7 @@ public class UserRepositoryTest extends IvectorApplicationTests {
         Role role = new Role();
         role.setId(new ObjectId().toString());
         role.setName("USER");
-        String encodedPassword = passwordEncoder.encode("password");
+        String encodedPassword = passwordEncoder.encode("1");
         List<User> users = IntStream.rangeClosed(1, 5)
                 .mapToObj(i -> {
                     User user = new User();
