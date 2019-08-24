@@ -1,5 +1,9 @@
 server:
   port: 8081
+servlet:
+  session:
+    persistent: true
+
 spring:
   output:
     ansi:
