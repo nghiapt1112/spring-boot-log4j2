@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>Sidebar template</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link th:href="@{/css/nav.css}" rel="stylesheet">
+    <script th:src="@{/js/nav.js}"></script>
+
+
+</head>
+
+<body>
+<div class="page-wrapper chiller-theme toggled">
+    <nav th:replace="fragment/nav :: left-nav"></nav>
+    <main class="page-content">
+        <div class="container-fluid">
+            <h2>Profile</h2>
+            <hr>
+            <form>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationDefault01">First name</label>
+                        <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="Mark" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationDefault02">Last name</label>
+                        <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="Otto" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationDefaultUsername">Username</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                            </div>
+                            <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Username" aria-describedby="inputGroupPrepend2" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault03">City</label>
+                        <input type="text" class="form-control" id="validationDefault03" placeholder="City" required>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="validationDefault04">State</label>
+                        <input type="text" class="form-control" id="validationDefault04" placeholder="State" required>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="validationDefault05">Zip</label>
+                        <input type="text" class="form-control" id="validationDefault05" placeholder="Zip" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                        <label class="form-check-label" for="invalidCheck2">
+                            Agree to terms and conditions
+                        </label>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit form</button>
+            </form>
+            </section>
+        </div>
+
+    </main>
+</div>
+</body>
+</html>

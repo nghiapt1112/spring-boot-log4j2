@@ -2,6 +2,7 @@ package com.nghia.ivector.infrastructure.web;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.reactive.config.CorsRegistry;
 import org.springframework.web.reactive.config.EnableWebFlux;
 import org.springframework.web.reactive.config.ResourceHandlerRegistry;
 import org.springframework.web.reactive.config.WebFluxConfigurer;
@@ -35,6 +36,16 @@ public class WebFluxMVCConfig implements WebFluxConfigurer {
 //    public void addResourceHandlers(ResourceHandlerRegistry registry) {
 //        registry.addResourceHandler("/resources/**", "/css/**")
 //                .addResourceLocations("/WEB-INF/resources/", "/WEB-INF/css/");
+//    }
+
+//    @Override
+//    public void addCorsMappings(CorsRegistry corsRegistry) {
+//        corsRegistry.addMapping("/**")
+//                .allowedOrigins("http://allowed-origin.com")
+//                .allowedMethods("PUT")
+//                .allowedHeaders("Baeldung-Allowed", "Baledung-Another-Allowed")
+//                .exposedHeaders("Baeldung-Allowed", "Baeldung-Exposed")
+//                .maxAge(3600);
 //    }
 
 }

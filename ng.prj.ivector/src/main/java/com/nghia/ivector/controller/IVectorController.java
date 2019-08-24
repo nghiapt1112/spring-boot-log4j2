@@ -3,6 +3,7 @@ package com.nghia.ivector.controller;
 import com.nghia.ivector.domain.Movie;
 import com.nghia.ivector.domain.chart.CanvasjsChartData;
 import com.nghia.ivector.domain.repository.MovieRepository;
+import com.nghia.ivector.domain.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -53,5 +54,9 @@ public class IVectorController {
         return movieRepository.findAll();
     }
 
-
+    @GetMapping("/profile")
+    public String userProfile(Model model) {
+        model.addAttribute("requestUser", new User());
+        return "user/profile";
+    }
 }
