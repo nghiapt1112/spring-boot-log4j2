@@ -6,7 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import reactor.core.publisher.Mono;
+
+import java.util.Optional;
 
 @Service
 public class UserServiceImpl {
@@ -15,7 +16,7 @@ public class UserServiceImpl {
     @Autowired
     private UserRepository userRepository;
 
-    public Mono<User> findById(String id) {
+    public Optional<User> findById(String id) {
         return userRepository.findById(id);
     }
 

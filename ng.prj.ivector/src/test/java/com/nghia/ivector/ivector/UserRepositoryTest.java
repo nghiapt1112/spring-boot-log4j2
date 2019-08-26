@@ -37,13 +37,13 @@ public class UserRepositoryTest extends IvectorApplicationTests {
                     return user;
                 }).collect(Collectors.toList());
 
-        userRepository
-                .saveAll(users)
-                .subscribe(System.out::println);
-
-        userRepository
-                .findAll()
-                .subscribe(System.out::println);
+//        userRepository
+//                .saveAll(users)
+//                .subscribe(System.out::println);
+//
+//        userRepository
+//                .findAll()
+//                .subscribe(System.out::println);
     }
 
 
