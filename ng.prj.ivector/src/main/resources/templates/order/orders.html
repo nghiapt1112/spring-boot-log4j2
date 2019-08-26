@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>Sidebar template</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link th:href="@{/css/nav.css}" rel="stylesheet">
+    <script th:src="@{/js/nav.js}"></script>
+
+
+</head>
+
+<body>
+<div class="page-wrapper chiller-theme toggled">
+    <nav th:replace="fragment/nav :: left-nav"></nav>
+    <main class="page-content">
+        <div class="container-fluid">
+            <h2>Orders</h2>
+            <hr>
+
+            <div>
+                <form method="POST" enctype="multipart/form-data" th:action="@{/upload}">
+                    <table>
+                        <tr><td>File to upload:</td><td><input type="file" name="files" /></td></tr>
+                        <tr><td></td><td><input type="submit" value="Upload" /></td></tr>
+                    </table>
+                </form>
+            </div>
+
+            <form th:action="@{/order/update}" method="POST" >
+                <button class="btn btn-primary" type="submit">Save</button>
+            </form>
+            </section>
+        </div>
+
+    </main>
+</div>
+</body>
+</html>

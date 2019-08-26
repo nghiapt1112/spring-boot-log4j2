@@ -1,8 +1,13 @@
 server:
   port: 8081
+  http2:
+    enabled: true
+
 servlet:
   session:
     persistent: true
+
+
 
 spring:
   output:
