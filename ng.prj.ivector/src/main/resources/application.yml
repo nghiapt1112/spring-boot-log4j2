@@ -2,10 +2,15 @@ server:
   port: 8081
   http2:
     enabled: true
+  tomcat:
+    max-threads: 4
+    accept-count: 4
+    max-connections: 4
 
 servlet:
   session:
     persistent: true
+
 
 
 

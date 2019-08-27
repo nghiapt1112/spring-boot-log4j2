@@ -27,9 +27,9 @@
             <hr>
 
             <div>
-                <form method="POST" enctype="multipart/form-data" th:action="@{/upload}">
+                <form method="POST" enctype="multipart/form-data" th:action="@{/order/upload}">
                     <table>
-                        <tr><td>File to upload:</td><td><input type="file" name="files" /></td></tr>
+                        <tr><td>File to upload:</td><td><input type="file" name="files" multiple accept="image/*"/></td></tr>
                         <tr><td></td><td><input type="submit" value="Upload" /></td></tr>
                     </table>
                 </form>
@@ -41,6 +41,13 @@
             </section>
         </div>
 
+        <div class="row">
+            <ul>
+                <li th:each="file : ${files}">
+                    <a th:href="${file}" th:text="${file}" />
+                </li>
+            </ul>
+        </div>
     </main>
 </div>
 </body>
