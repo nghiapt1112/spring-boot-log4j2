@@ -1,10 +1,12 @@
 <div class="profile clearfix" data-th-fragment="frag-menu-profile">
-    <div class="profile_pic">
-        <img data-th-src="@{/images/img.jpg}" alt="..." class="img-circle profile_img">
-    </div>
-    <div class="profile_info">
-        <span>Welcome,</span>
-        <h2>John Doe</h2>
-    </div>
-    <div class="clearfix"></div>
+    <a data-th-href="@{/user/profile}">
+        <div class="profile_pic">
+            <img data-th-src="@{/images/img.jpg}" alt="..." class="img-circle profile_img">
+        </div>
+        <div class="profile_info">
+            <span>Welcome,</span>
+            <h2>John Doe</h2>
+        </div>
+        <div class="clearfix"></div>
+    </a>
 </div>

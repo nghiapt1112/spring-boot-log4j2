@@ -1,6 +1,5 @@
 package com.nghia.ivector.domain.order;
 
-import com.nghia.ivector.domain.Margin;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

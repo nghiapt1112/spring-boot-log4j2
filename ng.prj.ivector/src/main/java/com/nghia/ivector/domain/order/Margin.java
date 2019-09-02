@@ -1,4 +1,4 @@
-package com.nghia.ivector.domain;
+package com.nghia.ivector.domain.order;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
