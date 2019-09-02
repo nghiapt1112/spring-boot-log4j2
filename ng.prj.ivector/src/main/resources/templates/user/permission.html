@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+        layout:decorate="~{fragment/root}"
+>
+
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Plain Page</title>
 </head>
+
 <body>
-$END$
+<div class="right_col" role="main" layout:fragment="content">
+    <p>
+    <div sec:authorize="isAuthenticated()" style="display: inline-block;">
+        <ul>
+            <li>Logged user: <span sec:authentication="name"></span></li>
+            <li>Roles: <span sec:authentication="principal.authorities"></span></li>
+        </ul>
+    </div>
+    </p>
+</div>
 </body>
 </html>

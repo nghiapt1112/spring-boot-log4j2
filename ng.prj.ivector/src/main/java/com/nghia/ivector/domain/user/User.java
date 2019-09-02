@@ -4,15 +4,12 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.util.CollectionUtils;
 
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 @Data
 @Document
@@ -28,8 +25,6 @@ public class User implements UserDetails {
 
     private Set<Role> roles = new HashSet<>();
 
-    private Collection<? extends GrantedAuthority> authorities;
-
     @Override
     public String getUsername() {
         return this.email;
@@ -42,10 +37,7 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        if (CollectionUtils.isEmpty(this.roles)) {
-            return Collections.EMPTY_SET;
-        }
-        return roles.stream().map(role -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toSet());
+        return this.roles == null ? Collections.EMPTY_SET : roles;
     }
 
     @Override

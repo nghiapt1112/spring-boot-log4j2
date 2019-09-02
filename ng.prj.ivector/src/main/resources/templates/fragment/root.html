@@ -1,10 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title layout:title-pattern="$LAYOUT_TITLE | $CONTENT_TITLE">I Vector!</title>
+
+    <!-- Bootstrap -->
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="/webjars/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="/webjars/nprogress/nprogress.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link th:href="@{/css/custom.min.css}" rel="stylesheet">
 </head>
-<body>
-$END$
+
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col">
+            <div class="left_col scroll-view">
+                <div class="navbar nav_title" style="border: 0;">
+                    <a th:href="@{/}" class="site_title"><i class="fa fa-paw"></i> <span>I Vector</span></a>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <!-- menu profile quick info -->
+                <div th:replace="fragment/frag-menu-profile :: frag-menu-profile"></div>
+                <!-- /menu profile quick info -->
+
+                <br />
+
+                <!-- sidebar menu -->
+                <div th:replace="fragment/frag-menu-sidebar :: frag-menu-sidebar"></div>
+                <!-- /sidebar menu -->
+
+                <!-- /menu footer buttons -->
+                <div th:replace="fragment/frag-menu-footer :: frag-menu-footer"></div>
+                <!-- /menu footer buttons -->
+            </div>
+        </div>
+
+        <!-- top navigation -->
+        <div th:replace="fragment/frag-top-nav :: frag-top-nav"></div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div layout:fragment="content"></div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <div th:replace="fragment/frag-footer :: frag-footer"></div>
+
+        <!-- /footer content -->
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="/webjars/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="/webjars/fastclick/fastclick.js"></script>
+<!-- NProgress -->
+<script src="/webjars/nprogress/nprogress.js"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="/js/custom.min.js"></script>
 </body>
 </html>

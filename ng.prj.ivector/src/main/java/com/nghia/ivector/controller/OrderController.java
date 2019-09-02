@@ -1,6 +1,6 @@
 package com.nghia.ivector.controller;
 
-import com.nghia.ivector.domain.OrderRequest;
+import com.nghia.ivector.domain.order.OrderRequest;
 import com.nghia.ivector.domain.order.service.OrderService;
 import com.nghia.ivector.domain.storage.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,24 +35,12 @@ public class OrderController {
     @GetMapping("/page")
     public String fwOrderPage(Model model) {
         model.addAttribute("orderRequest", new OrderRequest());
-        model.addAttribute("files", storageService.loadAll().map(
-                path -> MvcUriComponentsBuilder.fromMethodName(FileUploadController.class,
-                        "serveFile", path.getFileName().toString()).build().toString())
-                .collect(Collectors.toList()));
-
+        model.addAttribute("files", storageService
+                .loadAll()
+                .map(path -> MvcUriComponentsBuilder.fromMethodName(FileUploadController.class, "serveFile", path.getFileName().toString()).build().toString()).collect(Collectors.toList()));
+        model.addAttribute("orderRequest", new OrderRequest());
         return "order/orders";
     }
-
-//    @GetMapping("/hi")
-//    public String listUploadedFiles(Model model) throws IOException {
-//
-//        model.addAttribute("files", storageService.loadAll().map(
-//                path -> MvcUriComponentsBuilder.fromMethodName(FileUploadController.class,
-//                        "serveFile", path.getFileName().toString()).build().toString())
-//                .collect(Collectors.toList()));
-//
-//        return "uploadForm";
-//    }
 
     @GetMapping("/files/{filename:.+}")
     @ResponseBody
@@ -65,6 +53,13 @@ public class OrderController {
 
     @PostMapping("/upload")
     public String handleFileUpload(@RequestParam MultipartFile[] files, RedirectAttributes redirectAttributes) {
+        storageService.store(files[0]);
+        redirectAttributes.addFlashAttribute("message", "You successfully uploaded " + files[0].getOriginalFilename() + "!");
+        return "redirect:/order/page";
+    }
+
+    @PostMapping("/update")
+    public String saveOrder(@RequestParam MultipartFile[] files, RedirectAttributes redirectAttributes) {
         storageService.store(files[0]);
         redirectAttributes.addFlashAttribute("message", "You successfully uploaded " + files[0].getOriginalFilename() + "!");
         return "redirect:/order/page";

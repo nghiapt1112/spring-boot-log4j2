@@ -30,7 +30,6 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
 
     implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
@@ -40,6 +39,19 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'io.projectreactor:reactor-test'
     testImplementation 'org.springframework.security:spring-security-test'
+
+    // View resources
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    compile 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+    compile 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5' // :3.0.4.RELEASE
+
+
+    compile "org.webjars:bootstrap:3.3.7"
+    compile "org.webjars:font-awesome:4.6.1"
+    compile "org.webjars:fastclick:1.0.6"
+    compile "org.webjars:jquery:2.2.3"
+    compile "org.webjars.bower:nprogress:0.2.0"
+    compile "org.webjars:webjars-locator:0.30"
 }
 
 bootRun {

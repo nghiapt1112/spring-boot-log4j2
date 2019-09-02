@@ -20,26 +20,46 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
+    private LoggingAccessDeniedHandler loggingAccessDeniedHandler;
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
+        http
+                .formLogin().loginPage("/login").permitAll()
+                .and()
+                .authorizeRequests()
+                .antMatchers(
+                        "/",
+                        "/js/**",
+                        "/css/**",
+                        "/images/**",
+                        "/webjars/**").permitAll()
+                .antMatchers("/user/**").hasRole("USER")
                 .anyRequest().authenticated()
                 .and()
-                .formLogin()
-//                .loginPage("/login")
-//                .permitAll()
-//                .successForwardUrl("/")
-//                .and()
-//                .logout()
-//                .permitAll()
-//                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-//                .logoutSuccessUrl("/login")
-;
+                .logout()
+                    .invalidateHttpSession(true)
+                    .clearAuthentication(true)
+                    .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                    .logoutSuccessUrl("/login?logout")
+                    .permitAll()
+                .and()
+                .exceptionHandling().accessDeniedHandler(loggingAccessDeniedHandler)
+        ;
     }
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder);
     }
+
+//    @Override
+//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//        auth.inMemoryAuthentication()
+////                .passwordEncoder(passwordEncoder)
+//                .withUser("test@test.com").password("1").roles("USER")
+//                .and()
+//                .withUser("admin@test.com").password("1").roles("MANAGER");
+//    }
 
 }

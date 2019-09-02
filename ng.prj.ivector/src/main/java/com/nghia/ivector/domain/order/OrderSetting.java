@@ -1,8 +1,15 @@
-package com.nghia.ivector.domain;
+package com.nghia.ivector.domain.order;
 
+import com.nghia.ivector.domain.Margin;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
+@Getter
+@Setter
+@ToString
 public class OrderSetting {
     private Integer bright;
     private Margin margin;
@@ -10,5 +17,6 @@ public class OrderSetting {
     private String background; // hex color
     private String textColor; // hex color
     private String borderColor; // hex color
+    private String alignment;
 
 }
