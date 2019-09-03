@@ -51,7 +51,7 @@ public class MessageListener {
         this.filterLatch.countDown();
     }
 
-    @KafkaListener(topics = "${greeting.topic.name}", containerFactory = "greetingKafkaListenerContainerFactory")
+    @KafkaListener(topics = "${greeting.topic.name}", containerFactory = "defaultAbstractObjectKafkaListenerContainerFactory")
     public void greetingListener(Greeting greeting) {
         System.out.println("Recieved greeting message: " + greeting);
         this.greetingLatch.countDown();

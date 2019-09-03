@@ -1,6 +1,7 @@
 package ng.kafka.infrastructure.kafka;
 
 import ng.kafka.domain.Greeting;
+import ng.kafka.infrastructure.object.AbstractObject;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -65,6 +66,10 @@ public class KafkaConsumerConfig {
         return factory;
     }
 
+    /**
+     * chi config cho 1 group (greeting)
+     */
+
     public ConsumerFactory<String, Greeting> greetingConsumerFactory() {
         Map<String, Object> props = new HashMap<>();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress);
@@ -79,4 +84,22 @@ public class KafkaConsumerConfig {
         return factory;
     }
 
+
+    /**
+     * config cho tat ca cac object
+     */
+
+    public ConsumerFactory<String, AbstractObject> defaultAbstractObjectConsumerFactory() {
+        Map<String, Object> props = new HashMap<>();
+        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress);
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, "greeting");
+        return new DefaultKafkaConsumerFactory<>(props, new StringDeserializer(), new JsonDeserializer<>(AbstractObject.class));
+    }
+
+    @Bean
+    public ConcurrentKafkaListenerContainerFactory<String, AbstractObject> defaultAbstractObjectKafkaListenerContainerFactory() {
+        ConcurrentKafkaListenerContainerFactory<String, AbstractObject> factory = new ConcurrentKafkaListenerContainerFactory<>();
+        factory.setConsumerFactory(defaultAbstractObjectConsumerFactory());
+        return factory;
+    }
 }
